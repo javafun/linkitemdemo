@@ -1,5 +1,6 @@
 using EPiServer.Cms.Shell;
 using EPiServer.Cms.UI.AspNetIdentity;
+using EPiServer.Labs.LinkItemProperty;
 using EPiServer.Scheduler;
 using EPiServer.ServiceLocation;
 using EPiServer.Web.Routing;
@@ -29,6 +30,8 @@ namespace LinkItemExample
                 .AddCms()
                 .AddAdminUserRegistration()
                 .AddEmbeddedLocalization<Startup>();
+
+            services.AddLinkItemProperty();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
